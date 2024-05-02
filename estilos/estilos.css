@@ -1,0 +1,378 @@
+/*Los comentarios los debemos hacer así*/
+
+/* Existen 3 formas de aplicar un estilo:
+- En el HTML
+- En el <head> de la página HTML
+- En en archivo externo.... de tu proyecto o de otro externo */
+
+/*Iconos de Google -> Tamaños recomendados -> 18px | 24px | 36px | 48px*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contenedor{
+    width: 100%;
+    background: #d2d2d2;
+    font-size: 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    z-index: 0;
+}
+
+.contenedor .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  color: blueviolet;
+  font-size: 48px;
+}
+
+.letraGrande{
+font-size: 48px;
+}
+
+#contenedor{
+color: #6265ae;
+}
+
+/* Se puede especificar que una clase se aplique a elementos específicos de HTML */
+.centrado{
+    text-align: center; /*Para elementos tipo línea*/
+    margin: auto; /*Para elementos tipo bloque*/
+}
+
+.justificado{
+    text-align: justify;
+}
+
+/* Los estilos aplicados en línea tienen prioridad a los internos y externos*/
+/*Existen los estilos de Agente (Estilos del Navegador) */
+
+
+
+/*BORDES
+Los bordes se le pueden aplicar a todas las etiquetas*/
+/*border: width style color*/
+/* border-width:
+ border-style:dotted;
+ border-color:blue;
+ border: 3px dotted blue 
+ 
+ 
+ border-style -> solid, dotted, dashed, double, grove, */
+
+.borde{
+border-left: 6px solid pink;
+max-width: 40%;
+margin: 0 auto;
+padding: 25px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+/*CONTORNO -> Dibuja una línea fuera del borde*/
+outline: 2px dotted #6265ae;
+}
+
+.borde p{
+    padding-top: 25px 0;
+}
+
+.boton{
+   padding: 10px 25px;
+   background: #767676;
+   border: 1px solid #d2d2d2;
+
+   border-radius: 0 15px 0 15px;
+}
+
+.redondo{
+    width: 50px;
+    height: 50px;
+    background: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    color: #d2d2d2;
+
+    display: flex; /*Para ysar flexbox*/
+    justify-content: center; /*Para centrar horizontalmente*/
+    align-items: center; /*Para centrar verticalmente*/
+}
+
+.redondo a{
+    text-decoration: none;
+    line-height: 10px;
+    color: #d2d2d2;
+    font-size: 10px;
+}
+
+.izquierda{
+    text-align: right;
+}
+
+.derecha{
+    text-align: left;
+}
+
+.margen-arriba{
+    margin-top: 30px;
+}
+
+.margen-abajo{
+    margin-bottom: 30px;
+}
+
+.inputT{
+    border: none;
+    border-bottom: 2px solid blue;
+}
+
+.espacioTB{
+padding: 25px 0;
+}
+
+
+/*Fondos -> background (color - image)
+propiedades
+repeat --- si el fondo es pequeño, se repite en todo el contenedor*/
+body{
+    background-image: url(../img/chuches-para-perro.jpg);
+    background-repeat:no-repeat;
+    background-attachment: fixed; 
+    background-position: right bottom ;
+    background-size: 5%;
+
+    /*background: color image repeat attachment position -> en este orden*/
+
+    /* background: url(../img/Sin\ título-1.png) no-repeat fixed right bottom; */
+}
+
+
+
+.titulo{
+    font-size: 40px;
+    color: #ffffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.imagenR{
+    width: 100%;
+    height: 300px;
+    background-image: url(../img/Sin\ título-1.png);
+    background-color: #8784ea7b;
+    background-repeat:repeat;
+    background-size: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*Propiedad attachemnt: especifica si la imagen se queda fila o se desplaza con el scroll*/
+   background-attachment: fixed;
+background-position: right top;
+}
+
+.divMyP p{
+    margin: 25px;
+    padding: 25px;
+}
+
+.divMyP, .divMyP p{
+    border: 1px solid blue;
+}
+
+.margen-negativo{
+    width: 7%;
+    margin-top: -100px;
+}
+
+.margen-negativo img{
+    opacity: 0.7;
+    width: 10%;
+}
+
+/*Tanto en margin omo en padding pueden existir 3 valores:
+ej: padding: 25px 50px 70px
+25px relleno superior
+50px relleno izquierdo y derecho
+70px relleno inferior
+ */
+
+
+ /***** WIDTH Y HEIGHT ****/
+ /*Ancho y alto de los elementos
+ Hay que tener en cuenta que si establecemos un width que el navegador no lo puede mostrar, tenemos que establecer un ancho máximo*/
+
+ .imagenMx{
+    max-width: 50%;
+ }
+
+
+
+.col-1{width: 8.33%;}
+.col-2{width: 16.66%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33%;}
+.col-5{width: 41.66%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33%;}
+.col-8{width: 66.66%;}
+.col-9{width: 75%;}
+.col-10{width: 83.33%;}
+.col-11{width: 91.66%;}
+.col-12{width: 100%;}
+
+[class*=col-]{ /*Todas las clases que empiezan por col- se le aplica esta regla*/
+    display: flex;
+}
+
+.imgH{
+    opacity: 1;  /*Entre 0 hasta 1*/
+}
+.imgH:hover{
+    opacity: 0.5;
+    width: 33.33%;
+}
+
+
+
+/*
+*
+*
+*
+*
+*
+*/
+
+.contenedorMenu{
+    background: #000;
+    width: 100%;
+    height: 50px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contenedorMenu a{
+    text-decoration: none;
+    color: #d2d2d2;
+}
+
+.contenedorH, .contenedorF{
+    background: #656565;
+    height: 400px;
+}
+
+.contenedorH, .contenedorF,.contenedorHijos, .contenedorHijos div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorH{
+    margin-bottom: 50px;
+}
+
+.contenedorF{
+    margin-top: 50px;
+}
+
+.contenedorHijos div{
+    height: 300px;
+    background: #aeaeae;
+    margin: 25px;
+    padding: 25px;
+}
+
+.contenedorHijos{
+    margin: 25px auto;
+}
+
+@media screen and (width<=768px){
+    [class*="col-"]{
+        width: 100%;
+    }
+    .contenedorHijos{
+        flex-direction: column;
+    }
+}
+
+
+/**
+*
+*
+*
+*/
+
+.nav-plantilla2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+}
+
+.nav-plantilla2 a{
+    color: #fff;
+    height: 70px;
+}
+
+.cabecera{
+    height: 100vh;
+    background: #aeaeae;
+}
+
+.barra-separa{
+    background-color: #656565;
+    height: 300px;
+    margin-top: 30px;
+}
+
+.tres-cuadros div{
+background: #aeaeae;
+height: 300px;
+margin: 30px;
+padding: 30px;
+}
+
+.centrar-textos{
+    align-items: center;
+    justify-content: center;
+    display: flex; 
+    text-align: center;
+}
+
+.cabecera-plan3{
+    height: 200px;
+    background: #d2d2d2;
+}
+
+.cuatro-cuadros{
+    height: 300px;
+
+}
+
+.cuatro-cuadros{
+    margin: auto;
+}
+
+.color1{
+    background: #d8e2a6;
+}
+
+.color2{
+    background: #000;
+}
+
+.margen-arriba{
+    margin-top: 60px;
+}
+
+.margen-abajo{
+    margin-bottom: 60px;
+}
+
+.pie{
+    background: #000;
+    color: #d2d2d2;
+}
