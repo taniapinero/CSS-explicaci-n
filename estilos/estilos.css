@@ -252,6 +252,8 @@ ej: padding: 25px 50px 70px
     display: flex; 
     align-items: center;
     justify-content: space-evenly;
+    position: fixed;
+    top: 0;
 }
 
 .contenedorMenu a{
